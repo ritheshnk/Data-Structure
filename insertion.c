@@ -13,7 +13,7 @@ int insertion(int arr[],int size,int element,int capacity,int index)
 {
     if(size>=capacity)   //size is noihting but the number of ele in array whereas capacity is whole capacity
     {
-        return -1;
+        return -1;d
     }
 
     for(int i=size-1;i>=index;i--)
