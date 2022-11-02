@@ -19,7 +19,7 @@ void main()
 }
 
 
-// WITH USING FUNTION
+// USING FUNTION
 #include<stdio.h>
 
 int linearsearch(int arr[],int size,int element)
