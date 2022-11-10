@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct Node{
+    int data;
+    struct Node * next;
+};
+
+struct Node * insertionafter(struct Node * head,struct Node * previousnode,int data)
+{
+    struct Node * ptr=(struct Node *)malloc(sizeof(struct Node));
+    ptr->data=data;
+    
+    ptr->next=previousnode->next;
+    previousnode->next=ptr;
+    return head;  //need to return head cause we need to print 
+
+}
+
+
+void show(struct Node * ptr)   //instead of ptr u can use anything 
+{
+    while(ptr!=NULL)
+    {
+        printf("%d ",ptr->data);
+        ptr=ptr->next;
+    }
+
+}
+
+int main()
+{
+    struct Node * head=(struct Node *)malloc(sizeof(struct Node));
+    struct Node * second=(struct Node *)malloc(sizeof(struct Node));
+    struct Node * third=(struct Node *)malloc(sizeof(struct Node));
+
+    
+
+    head->data=8;
+    head->next=second;
+
+    second->data=9;
+    second->next=third;
+
+    third->data=10;
+    third->next=NULL;
+
+    show(head);
+    insertionafter(head,second,69);
+    printf("\n after insertiom\n");
+    show(head);
+
+}
