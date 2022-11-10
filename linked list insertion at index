@@ -19,7 +19,7 @@ struct Node * insertionatindex(struct Node * head,int data,int index)
 {
     struct Node * ptr = (struct Node * )malloc(sizeof(struct Node));
     ptr->data=data;
-    struct Node * p=head;
+    struct Node * p=head;   //pointers that points head
     int i=0;
     while (i!=index-1)
     {
