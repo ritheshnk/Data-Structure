@@ -10,14 +10,17 @@ int binarysearch(int arr[],int size,int element)
     {
         mid=(low+high)/2;
         //Start of searching
+        
         if(arr[mid]==element)
         {
             return mid;
          }
+        
         if(arr[mid]<element)
         {
             low=mid+1;
         }
+        
          else
         {
             high=mid-1;
