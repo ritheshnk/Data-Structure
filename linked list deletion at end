@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct node{
+    int data;
+    struct node * next;
+};
+
+void show(struct node * head)
+{
+    while(head!=NULL)
+    {
+        printf("%d ",head->data);
+        head=head->next;
+    }
+}
+
+struct node * deletionend(struct node * head)
+{
+    struct node * p=head;
+    struct node * q=head->next;
+
+    while(q->next!=NULL)
+    {
+        p=p->next;
+        q=q->next;
+    }
+    p->next=NULL;
+    free(q);
+    return head;
+}
+
+int main()
+{
+    struct node * head=(struct node *)malloc(sizeof(struct node));
+    struct node * second=(struct node *)malloc(sizeof(struct node));
+    struct node * third=(struct node *)malloc(sizeof(struct node));
+    struct node * forth=(struct node *)malloc(sizeof(struct node));
+
+    head->data=8;
+    head->next=second;
+
+    second->data=9;
+    second->next=third;
+    
+    third->data=10;
+    third->next=forth;
+
+    forth->data=11;
+    forth->next=NULL;
+
+    show(head);
+    deletionend(head);
+    printf("\nafter deletion\n");
+    show(head);
+
+
+}
