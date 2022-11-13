@@ -28,36 +28,6 @@ struct Node * insertionatfirst(struct Node *head,int data)
 
 int main()
 {
-    #include<stdio.h>
-#include<stdlib.h>
-
-struct Node{
-    int data;
-    struct Node * next;
-};
-
-void show(struct Node *ptr)
-{
-    while (ptr!=NULL)
-    {
-        printf("%d\n",ptr->data);
-        ptr=ptr->next;
-    }
-    
-
-}
-
-struct Node * insertionatfirst(struct Node *head,int data)
-{
-    struct Node *ptr=(struct Node *)malloc(sizeof(struct Node));
-    ptr->next=head;
-    ptr->data=data;
-    return ptr;
-}
-
-
-int main()
-{
     struct Node *head=(struct Node *) malloc(sizeof(struct Node));
     struct Node *second=(struct Node *) malloc(sizeof(struct Node));
     struct Node *third=(struct Node *) malloc(sizeof(struct Node));
@@ -80,7 +50,6 @@ int main()
     show(head);
     return 0;
 
-}
     head->data=7;
     head->next=second;
 
