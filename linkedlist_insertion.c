@@ -49,19 +49,5 @@ int main()
     head=insertionatfirst(head,85);
     show(head);
     return 0;
-
-    head->data=7;
-    head->next=second;
-
-    second->data=8;
-    second->next=third;
-
-    third->data=9;
-    third->next=NULL;
-    show(head);  //head cause we are starting from head
-    printf("after insertion\n");
-    head=insertionatfirst(head,85);
-    show(head);
-    return 0;
-
+    
 }
